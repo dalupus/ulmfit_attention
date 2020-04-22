@@ -24,7 +24,7 @@ class IMDB(Dataset):
         self.bs = bs
         self.eval_bs = eval_bs
         self.path = untar_data(URLs.IMDB)
-        self.vocab_path = self.path / 'itos.pkl'
+        self.vocab_path = self.path / 'tmp_clas' / 'itos.pkl'
         self.vocab = Vocab.load(self.vocab_path)
         self._test_set_cache = self.path / 'test_as_valid.pkl'
 
